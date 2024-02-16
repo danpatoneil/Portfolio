@@ -9,7 +9,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 header {
@@ -23,23 +23,15 @@ header {
 nav {
   display: flex;
   background-color: var(--orange);
-}
-
-nav a {
-  color: var(--green);
-  padding: 20px 30px;
   text-decoration: none;
-}
-
-nav a:hover {
-  background-color: var(--white);
+  color: var(--green);
+  flex-wrap: wrap;
 }
 
 main {
   background-color: var(--green);
   color: var(--white);
   display: flex;
-  flex-wrap: wrap;
 }
 
 footer {
@@ -49,24 +41,51 @@ footer {
   color: var(--green);
 }
 
-.card:first-of-type{
+
+.card {
+  flex: 0 0 500px;
+  position: relative;
+  border: 15px solid var(--green);
+}
+
+.card img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:first-of-type{
+  flex-basis: 100vw;
 }
 
 .card:hover{
-
+  border-color: var(--white);
 }
 
-.card {
-  flex: 0 0 300px;
+nav p{
+  position: absolute;
+  bottom: 150px;
+  left: 0px;
+  background-color: var(--green);
+  color: var(--white);
+  padding: 15px;
+  font-size: 1.5rem;
 }
 
-.card > header {
-  
+h3{
+  font-size: 3rem;
+  color: var(--orange);
+  padding-bottom: 40px;
 }
 
-.card > p {
+section{
+  font-size: 1.5rem;
+  padding: 50px 0px;
+  border: 7px var(--orange);
+}
 
+article{
+  margin: 75px 25px;
 }
 
 @media screen and (max-width: 768px) {
