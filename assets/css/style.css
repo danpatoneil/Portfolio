@@ -4,6 +4,7 @@
 --orange: #c46a03;
 }
 
+/* H1 and H5 are only used in the header. */
 h1 {
   font-size: 23rem;
 }
@@ -11,14 +12,10 @@ h1 {
 h5{
   display: block;
   font-size: 1.5rem;
-  
+
   padding-bottom: 10px;
 }
-
-h2 {
-  font-size: 2.5rem;
-}
-
+/* The header css is the first piece of actually interesting CSS, the background image is a cut out of my face*/
 header {
   background-image: url(../images/eyes.jpg);
   background-position: center;
@@ -27,6 +24,8 @@ header {
   text-align: center;
 }
 
+
+/* The nav box shows images representing all the projects which also act as links to the id tags for each project further down. When those are hovered, the green border becomes white and the white text becomes green. The nav tag is full of divs with class card that are stored in a flex box that will filter them into multiple rows, except for the first project which is bigger than the others.*/
 nav {
   display: flex;
   background-color: var(--orange);
@@ -35,25 +34,21 @@ nav {
   flex-wrap: wrap;
 }
 
-main {
-  background-color: var(--green);
-  color: var(--white);
-  margin: 12px var(--orange);
-}
-
-footer {
-  padding: 50px 0px 10px 0px;
-  text-align: center;
-  background-color: var(--orange);
-  color: var(--green);
-}
-
-
 .card {
   flex: 0 0 50%;
   position: relative;
 }
-
+/* The H4 tag is the tag used for the card titles, they're offset by 150px from the bottom. In future this might be able to be changed so they are centered on the images' left side. The 15px offset is to account for the border on the image */
+h4{
+  position: absolute;
+  bottom: 150px;
+  left: 15px;
+  background-color: var(--green);
+  color: var(--white);
+  padding: 15px;
+  font-size: 1.5rem;
+}
+/* the images on the cards need to fill the entire card, but also need to not be stretched and look awful*/
 .card img{
   width: 100%;
   height: 100%;
@@ -74,14 +69,19 @@ footer {
   color: var(--green);
 }
 
-h4{
-  position: absolute;
-  bottom: 150px;
-  left: 15px;
+
+/* The css for main is pretty boring as it is really only the names and descriptions of the projects, which as the readme says are all entirely made up */
+
+main {
   background-color: var(--green);
   color: var(--white);
-  padding: 15px;
+  margin: 12px var(--orange);
+}
+
+section{
   font-size: 1.5rem;
+  padding: 50px 0px;
+
 }
 
 h3{
@@ -89,16 +89,27 @@ h3{
   color: var(--orange);
   padding-bottom: 40px;
 }
-
-section{
-  font-size: 1.5rem;
-  padding: 50px 0px;
-  border: 7px var(--orange);
-}
-
 article{
   margin: 0px 25px;
 }
+
+
+
+
+/* H2 is only used in the footer. The footer on a traditional site often has contact us and other last resort links, but I don't have any need for those and thus the footer for my page simply has a joke referencing the header image */
+footer {
+  padding: 50px 0px 10px 0px;
+  text-align: center;
+  background-color: var(--orange);
+  color: var(--green);
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+
+
 
 @media screen and (max-width: 768px) {
   main,
