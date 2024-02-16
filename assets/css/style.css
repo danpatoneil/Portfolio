@@ -4,9 +4,13 @@
 --orange: #c46a03;
 }
 
-/* H1 and H5 are only used in the header. */
+/* H1 and H5 are only used in the header. H1 is actually a link to a linktree that includes my github and linkedin so text decoration none is there to remove the underline */
 h1 {
   font-size: 23rem;
+}
+h1 a{
+  color: var(--green);
+  text-decoration: none;
 }
 
 h5{
@@ -81,7 +85,17 @@ main {
 section{
   font-size: 1.5rem;
   padding: 50px 0px;
+  line-height: 30px;
 
+}
+
+section a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+section a::after{
+  content: "🔗";
 }
 
 h3{
